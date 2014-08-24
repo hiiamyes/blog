@@ -1,4 +1,6 @@
  
+# Hello, Github Pages~!
+
 先後試用了 Logdown 和 Blogger 後，決定再換來 GitHub Pages 試試，而
 
 1. Logdown 雖然環境不錯，但還沒付費的我 30 張圖片的上傳上限已經爆了
