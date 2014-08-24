@@ -37,7 +37,7 @@ Github Pages 的架構我自己把它區分為三部分
 
 就能在 gp. 上看到
 
-
+![img1][]
 
 而在首頁中，為了能建立出 index of post 
 
@@ -47,13 +47,13 @@ Github Pages 的架構我自己把它區分為三部分
 
 不過如果就這樣 deploy 的話，會變成這樣
 
-
-
+![img2][]
 
 我就是在這邊被困擾了很久不知道哪裡出錯哈哈，後來才突然想到，這情形和 Angularjs 沒有正常 work 的情況很像，所以推測，應該是 Liquid 沒有正常發揮作用造成的，而要讓
 
 
 [img1]: ../img/2014-08-24/1 "haha"
+[img2]: ../img/2014-08-24/2 "haha"
 
 
 [github pages]: https://pages.github.com/ "Github Pages"
