@@ -53,12 +53,12 @@ Github Pages 的架構我自己把它區分為三部分
 
 <script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index.html"></script>
 
+結果就是這樣，終於完成囉！！
 
 
 
-
-[img1]: {{ site.url }}/img/2014-08-24/1 "haha"
-[img2]: {{ site.url }}/img/2014-08-24/2 "haha"
+[img1]: {{ site.url }}/img/2014-08-24/1.png "haha"
+[img2]: {{ site.url }}/img/2014-08-24/2.png "haha"
 
 
 [github pages]: https://pages.github.com/ "Github Pages"
