@@ -27,13 +27,18 @@ Github Pages 的架構我自己把它區分為三部分
 
 到這邊都滿順利的，但接下來的部分卻讓我搞了很久...
 
+<br>
+
 1. create a index.html
 2. create a folder _posts
 3. create a 2014_08_24_hello_github_pages.md
+上面這三步驟能夠建立出一個首頁 + 一篇 post
 
 ![folder]({{site.url}}/img/2014-08-24/folder.png)
 
-上面這三步驟能夠建立出一個首頁 + 一篇 post，首頁的部分就像在寫一般 html 一樣，例如這樣寫
+而首頁的部分
+
+就像在寫一般 html 一樣，例如寫出下面這樣的 index.html
 
 <script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index_hello.html"></script>
 
@@ -41,9 +46,11 @@ Github Pages 的架構我自己把它區分為三部分
 
 ![index_hello]({{site.url}}/img/2014-08-24/1.png)
 
+---
+
 而在首頁中，為了能建立出 index of post 
 
-所以我們在 <body> 中加入些東西
+我們得在 <body> 中加入些東西
 
 <script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index_wrong.html"></script>
 
@@ -51,11 +58,11 @@ Github Pages 的架構我自己把它區分為三部分
 
 ![index_wrong]({{site.url}}/img/2014-08-24/2.png)
 
-我就是在這邊被困擾了很久不知道哪裡出錯哈哈
+*我就是在這邊被困擾了很久不知道哪裡出錯哈哈*
 
-後來才突然想到，這情形和 Angularjs 沒有正常 work 的情況很像，所以推測，應該是 Liquid 沒有正常發揮作用造成的
+後來才突然想到，這情形和 Angularjs 沒有正常 work 的情況很像，所以推測，*應該是 Liquid 沒有正常發揮作用造成的*
 
-在 survey 過後才發現，要在 .html 最開頭加上兩個 --- 才可以
+在 survey 過後才發現，要在 .html 最開頭加上兩個 dash*3 才可以
 
 <script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index.html"></script>
 
