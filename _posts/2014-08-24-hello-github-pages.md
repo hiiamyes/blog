@@ -33,7 +33,7 @@ Github Pages 的架構我自己把它區分為三部分
 
 上面這三步驟能夠建立出一個首頁 + 一篇 post，首頁的部分就像在寫一般 html 一樣，例如這樣寫
 
-<script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js"></script>
+<script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index_hello.html"></script>
 
 就能在 gp. 上看到
 
@@ -43,19 +43,17 @@ Github Pages 的架構我自己把它區分為三部分
 
 所以我們在 <body> 中加入這一段
 
-	<ul>
-        {% for post in site.posts %}
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+<script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index_wrong"></script>
 
 不過如果就這樣 deploy 的話，會變成這樣
 
 
 
+
 我就是在這邊被困擾了很久不知道哪裡出錯哈哈，後來才突然想到，這情形和 Angularjs 沒有正常 work 的情況很像，所以推測，應該是 Liquid 沒有正常發揮作用造成的，而要讓
+
+
+[img1]: ../img/2014-08-24/1 "haha"
 
 
 [github pages]: https://pages.github.com/ "Github Pages"
