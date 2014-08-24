@@ -1,5 +1,5 @@
  
-先後試用了 Logdown 和 Blogger 後覺得，決定再換來 GitHub Pages 試試，而
+先後試用了 Logdown 和 Blogger 後，決定再換來 GitHub Pages 試試，而
 
 1. Logdown 雖然環境不錯，但還沒付費的我 30 張圖片的上傳上限已經爆了
 1. Blogger 就像過去的寫作環境一樣，雖然不支援 markdown，但能改文字顏色這點我還是滿喜歡的，不過最後，還是因為貼 gist 很麻煩，以及圖片會自動跑進 google+ 這兩點，讓我果斷的放棄使用
@@ -43,17 +43,22 @@ Github Pages 的架構我自己把它區分為三部分
 
 所以我們在 <body> 中加入這一段
 
-<script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index_wrong"></script>
+<script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index_wrong.html"></script>
 
 不過如果就這樣 deploy 的話，會變成這樣
 
 ![img2][]
 
-我就是在這邊被困擾了很久不知道哪裡出錯哈哈，後來才突然想到，這情形和 Angularjs 沒有正常 work 的情況很像，所以推測，應該是 Liquid 沒有正常發揮作用造成的，而要讓
+我就是在這邊被困擾了很久不知道哪裡出錯哈哈，後來才突然想到，這情形和 Angularjs 沒有正常 work 的情況很像，所以推測，應該是 Liquid 沒有正常發揮作用造成的，因此在 survey 過後才發現，要在 .html 最開頭加上兩個三杠才可以
+
+<script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index.html"></script>
 
 
-[img1]: ../img/2014-08-24/1 "haha"
-[img2]: ../img/2014-08-24/2 "haha"
+
+
+
+[img1]: {{ site.url }}/img/2014-08-24/1 "haha"
+[img2]: {{ site.url }}/img/2014-08-24/2 "haha"
 
 
 [github pages]: https://pages.github.com/ "Github Pages"
