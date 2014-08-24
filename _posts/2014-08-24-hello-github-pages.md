@@ -12,12 +12,17 @@ Github Pages 的架構我自己把它區分為三部分
 1. static site generator 	: [jekyll][]
 1. templating language		: [liquid][]
 
-簡單來說，就是整個網站放在 github 上，然後透過 jekyll 把檔案轉成 html、css 變成網頁，而其中轉成 markdown 轉成 html 的部分，會使用 [liquid][] 這套 templating language。
+簡單來說，就是整個網站放在 github 上，然後透過 jekyll 把檔案轉成 html、css 變成網頁
+
+而其中轉成 markdown 轉成 html 的部分，會使用 [liquid][] 這套 templating language
+
+---
 
 按照 [github pages][] 中的 tutorial，很快的就能把 repository 和 jekyll 的環境建立起來，大致上的步驟為：
 
 1. create a git repository on Github with the name [username].github.io
 1. installing [jekyll][]
+
 
 	gem install bundler
 	create a Gemfile
@@ -29,7 +34,9 @@ Github Pages 的架構我自己把它區分為三部分
 
 1. create a index.html
 2. create a folder _posts
-3. create a 2014_08_24_hello_github_pages
+3. create a 2014_08_24_hello_github_pages.md
+
+![folder]({{site.url}}/img/2014-08-24/folder.png)
 
 上面這三步驟能夠建立出一個首頁 + 一篇 post，首頁的部分就像在寫一般 html 一樣，例如這樣寫
 
@@ -37,17 +44,17 @@ Github Pages 的架構我自己把它區分為三部分
 
 就能在 gp. 上看到
 
-![img1]({{site.url}}/img/2014-08-24/1.png)
+![index_hello]({{site.url}}/img/2014-08-24/1.png)
 
 而在首頁中，為了能建立出 index of post 
 
-所以我們在 <body> 中加入這一段
+所以我們在 <body> 中加入些東西
 
 <script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index_wrong.html"></script>
 
 不過如果就這樣 deploy 的話，會變成這樣
 
-![img2][]
+![index_wrong]({{site.url}}/img/2014-08-24/2.png)
 
 我就是在這邊被困擾了很久不知道哪裡出錯哈哈，後來才突然想到，這情形和 Angularjs 沒有正常 work 的情況很像，所以推測，應該是 Liquid 沒有正常發揮作用造成的，因此在 survey 過後才發現，要在 .html 最開頭加上兩個三杠才可以
 
@@ -55,10 +62,10 @@ Github Pages 的架構我自己把它區分為三部分
 
 結果就是這樣，終於完成囉！！
 
+---
 
 
-<!-- [img1]: {{site.url}}/img/2014-08-24/1.png "haha" -->
-<!-- [img2]: {{site.url}}/img/2014-08-24/2.png "haha" -->
+
 
 
 [github pages]: https://pages.github.com/ "Github Pages"
