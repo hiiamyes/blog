@@ -16,19 +16,12 @@ Github Pages 的架構我自己把它區分為三部分
 
 而其中轉成 markdown 轉成 html 的部分，會使用 [liquid][] 這套 templating language
 
----
+<br>
 
 按照 [github pages][] 中的 tutorial，很快的就能把 repository 和 jekyll 的環境建立起來，大致上的步驟為：
 
-1. create a git repository on Github with the name [username].github.io
-1. installing [jekyll][]
-
-
-	gem install bundler
-	create a Gemfile
-		source 'https://rubygems.org'
-		gem 'github-pages'
-	bundle install
+1. create a git repository on Github with the name: [username].github.io
+1. [installing jekyll][]
 
 到這邊都滿順利的，但接下來的部分卻讓我搞了很久...
 
@@ -56,22 +49,25 @@ Github Pages 的架構我自己把它區分為三部分
 
 ![index_wrong]({{site.url}}/img/2014-08-24/2.png)
 
-我就是在這邊被困擾了很久不知道哪裡出錯哈哈，後來才突然想到，這情形和 Angularjs 沒有正常 work 的情況很像，所以推測，應該是 Liquid 沒有正常發揮作用造成的，因此在 survey 過後才發現，要在 .html 最開頭加上兩個三杠才可以
+我就是在這邊被困擾了很久不知道哪裡出錯哈哈
+
+後來才突然想到，這情形和 Angularjs 沒有正常 work 的情況很像，所以推測，應該是 Liquid 沒有正常發揮作用造成的
+
+在 survey 過後才發現，要在 .html 最開頭加上兩個 --- 才可以
 
 <script src="https://gist.github.com/hiiamyes/ccd5b41ddde5b7be8b91.js?file=index.html"></script>
 
 結果就是這樣，終於完成囉！！
 
----
 
 
 
 
-
-[github pages]: https://pages.github.com/ "Github Pages"
-[jekyll]: http://jekyllrb.com/ "Jekyll"
-[liquid]: http://docs.shopify.com/themes/liquid-documentation/basics "Liquid"
-[creating pages]: https://help.github.com/articles/creating-pages-with-the-automatic-generator "Creating Pages"
+[github pages]: https://pages.github.com/
+[jekyll]: http://jekyllrb.com/
+[installing jekyll]: https://help.github.com/articles/using-jekyll-with-pages
+[liquid]: http://docs.shopify.com/themes/liquid-documentation/basics
+[creating pages]: https://help.github.com/articles/creating-pages-with-the-automatic-generator"
 
 
 
