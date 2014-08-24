@@ -37,7 +37,7 @@ Github Pages 的架構我自己把它區分為三部分
 
 就能在 gp. 上看到
 
-![img1][]
+![img1]({{site.url}}/img/2014-08-24/1.png)
 
 而在首頁中，為了能建立出 index of post 
 
@@ -57,8 +57,8 @@ Github Pages 的架構我自己把它區分為三部分
 
 
 
-[img1]: {{ site.url }}/img/2014-08-24/1.png "haha"
-[img2]: {{ site.url }}/img/2014-08-24/2.png "haha"
+<!-- [img1]: {{site.url}}/img/2014-08-24/1.png "haha" -->
+<!-- [img2]: {{site.url}}/img/2014-08-24/2.png "haha" -->
 
 
 [github pages]: https://pages.github.com/ "Github Pages"
