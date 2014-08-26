@@ -1,6 +1,7 @@
 
 Using exiftool instead of imageMagick
 ---
+
 For managing metadata of photo by Node.js
 ---
 
@@ -50,10 +51,9 @@ Orz...
 * `-gps*`：把 gps 開頭的 metadata 都列出來
 * `-gpslatitude=25.1111` 
 
----
-
 大致上就是這樣囉，謝謝～！
 
+---
 
 reference:
 ---
