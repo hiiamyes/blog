@@ -1,3 +1,13 @@
+---
+layout: default
+---
+
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
 用 Node.js + AWS SDK 操作 s3
 ---
 
@@ -43,7 +53,7 @@ create 和 delete Bucket 要成功很簡單
 
 只要給個 Bucket 的名字再 call call API 就好了
 
-{% highlight JavaScript %}
+{% highlight js %}
     function createBucket() {
     	var params = {Bucket: 'hiiamyestestbbb'};
     	s3.createBucket(params, function(err, data) {
