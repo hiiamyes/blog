@@ -2,6 +2,7 @@
 ---
 
 要操作 s3 應該有三種方法：
+
 1. 用 AWS CLI
 1. 用 AWS SDK for different languages, like JS, Ruby, ...
 1. 用 REST API call 
@@ -15,13 +16,16 @@
 3. upload / list / delete / download Photo (Object)
 
 幾乎全部的內容都可以在
+
 * [AWS SDK for JavaScript in Node.js][aws-sdk] 
 * [API Documentation][aws-sdk-api] 
+
 找到
 
 Config.json
 ---
 首先，要讓你的 code 有權限 access s3 server，你必須做兩件事
+
 1. 到 IAM 建立個 User 並 ***打開適當的權限*** （在 CLI 的時候做過囉就不再說明）
 2. create a config.json 並在 code 裡面 load 它（在 SDK 的 getting started 裡面就有囉就不說明） 
 
@@ -39,6 +43,7 @@ create 和 delete Bucket 要成功很簡單
 
 只要給個 Bucket 的名字再 call call API 就好了
 
+{% highlight JavaScript %}
     function createBucket() {
     	var params = {Bucket: 'hiiamyestestbbb'};
     	s3.createBucket(params, function(err, data) {
@@ -53,7 +58,8 @@ create 和 delete Bucket 要成功很簡單
 			if (err) throw err;
 			console.log('bucket deleted);
 		});
-	}                                                                                                  
+	}
+{% highlight JavaScript %}         
 
 完成～
 
