@@ -2,12 +2,6 @@
 layout: post
 ---
 
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
-
 用 Node.js + AWS SDK 操作 s3
 ---
 
@@ -18,6 +12,8 @@ end
 1. 用 REST API call 
 
 用 CLI 的方式之前玩過了，所以今天要再來試用 SDK 的方法，而使用的語言就是 Node.js！
+
+---
 
 下面要進行的步驟有幾個：
 ---
@@ -54,21 +50,21 @@ create 和 delete Bucket 要成功很簡單
 只要給個 Bucket 的名字再 call call API 就好了
 
 {% highlight js %}
-    function createBucket() {
-    	var params = {Bucket: 'hiiamyestestbbb'};
-    	s3.createBucket(params, function(err, data) {
-    		if (err) throw err;
-          	console.log('bucket created');
-        });
-    }       
+function createBucket() {
+	var params = {Bucket: 'hiiamyestestbbb'};
+	s3.createBucket(params, function(err, data) {
+		if (err) throw err;
+      	console.log('bucket created');
+    });
+}       
 
-    function deleteBucket(){
-		var params = {Bucket: 'hiiamyestestbbb'};
-    	s3.deleteBucket(params, function(err, data){
-			if (err) throw err;
-			console.log('bucket deleted);
-		});
-	}
+function deleteBucket(){
+	var params = {Bucket: 'hiiamyestestbbb'};
+	s3.deleteBucket(params, function(err, data){
+		if (err) throw err;
+		console.log('bucket deleted);
+	});
+}
 {% endhighlight %}
 
 完成～
@@ -84,38 +80,42 @@ Object 的操作在這邊我用照片當例子
 
 而 upload 和 download 稍微複雜點，因為使用上得搭配 fs
 
-    function uploadPhoto() {
-        fs.readFile('photo.JPG', function(err, data) {
-            var params = {
-                Bucket: 'hiiamyestestbbb',
-                Key: 'photo1.jpg',
-                Body: data,
-                ContentType: 'image/jpeg'
-            };
-            s3.putObject(params, function(err, data) {
-                if (err) throw err;
-                console.log('photo uploaded');             
-            });
+{% highlight js %}
+function uploadPhoto() {
+    fs.readFile('photo.JPG', function(err, data) {
+        var params = {
+            Bucket: 'hiiamyestestbbb',
+            Key: 'photo1.jpg',
+            Body: data,
+            ContentType: 'image/jpeg'
+        };
+        s3.putObject(params, function(err, data) {
+            if (err) throw err;
+            console.log('photo uploaded');             
         });
-    }
+    });
+}
+{% endhighlight %}
 
 特別要注意的就是 params 裡面的 Body 和 ContentType 該如何設定吧
 
 （其實 permission 應該也是要一起設定的，但我懶得練習了，以後再說ＸＤ）
 
-    function downloadPhoto(){
-        var params = {
-            Bucket: 'hiiamyestestbbb',
-            Key: 'photo1.jpg'
-        }
-        s3.getObject(params, function(err, data){
-            if(err) throw err;
-            fs.writeFile('savedPhoto.jpg', data.Body, function(err){
-                if(err) throw err;
-                console.log('photo saved');
-            });
-        });
+{% highlight js %}
+function downloadPhoto(){
+    var params = {
+        Bucket: 'hiiamyestestbbb',
+        Key: 'photo1.jpg'
     }
+    s3.getObject(params, function(err, data){
+        if(err) throw err;
+        fs.writeFile('savedPhoto.jpg', data.Body, function(err){
+            if(err) throw err;
+            console.log('photo saved');
+        });
+    });
+}
+{% endhighlight %}
 
 download 的部分則必須特別注意，回來的 data 裡面可不只有 object data 喔！ 
 
@@ -123,7 +123,15 @@ download 的部分則必須特別注意，回來的 data 裡面可不只有 obje
 
 最後再用 fs 把它存成 .jpg 就完成啦！
 
+<br>
+
+補張 file system printscreen~
+
 <img src="{{site.url}}/img/2014-08-31/folder.png">
+
+[Source code][source-code]
+
+---
 
 後記
 ---
@@ -138,3 +146,4 @@ npm 上當然也有人做出了方便使用的 package [npm-s3]
 [npm-s3]: https://www.npmjs.org/package/s3
 [aws-sdk]: http://aws.amazon.com/sdk-for-node-js/
 [aws-sdk-api]: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/frames.html
+[source-code]: https://github.com/hiiamyes/smallCode/tree/master/nodejs/aws_sdk_s3
