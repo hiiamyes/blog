@@ -1,25 +1,21 @@
 ---
-
+layout: default
 ---
-<!doctype html>
 
-<html>
+<div>
+    hi i'm yes
 
-<head>
-</head>
-
-<body>
-
-	hi i'm yes
-
+{% highlight ruby %}
+def foo
+      puts 'foo’
+end
+{% endhighlight %}
     <ul>
         {% for post in site.posts %}
         <li>
             <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
         {% endfor %}
-    </ul> 
+    </ul>
 
-</body>
-
-</html>
+</div>
