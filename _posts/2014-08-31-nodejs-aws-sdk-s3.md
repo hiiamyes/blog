@@ -59,7 +59,7 @@ create 和 delete Bucket 要成功很簡單
 			console.log('bucket deleted);
 		});
 	}
-{% highlight JavaScript %}         
+{% endhighlight %}
 
 完成～
 
