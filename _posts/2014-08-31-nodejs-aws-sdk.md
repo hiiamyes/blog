@@ -107,7 +107,7 @@ download 的部分則必須特別注意，回來的 data 裡面可不只有 obje
 
 最後再用 fs 把它存成 .jpg 就完成啦！
 
-<img src="../img/2014-08-31/folder.png">
+<img src="{{site.url}}/img/2014-08-31/folder.png">
 
 後記
 ---
