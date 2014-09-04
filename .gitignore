@@ -1,1 +1,10 @@
 _site
+
+
+# android 
+*.iml
+.gradle
+.idea
+build/
+local.properties
+                      
