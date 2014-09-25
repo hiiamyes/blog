@@ -2,7 +2,7 @@
 layout: post
 ---
 
-Metadata of S3 Object
+在 S3 Object 的 Metadata 裡儲存中文！
 ---
 
 AWS S3 的儲存方式，是必須先開個類似資料夾概念的 Bucket，然後再把檔案以 Object 的形式上傳進 Bucket 中
