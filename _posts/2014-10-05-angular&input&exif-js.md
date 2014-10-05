@@ -7,6 +7,11 @@ layout: post
 
 <br>
 
+<p data-height="400" data-theme-id="0" data-slug-hash="AEBau" data-default-tab="result" data-user="namejoshua" class='codepen'>See the Pen <a href='http://codepen.io/namejoshua/pen/AEBau/'>AngularJS + <input> + exif-js demo</a> by yes (<a href='http://codepen.io/namejoshua'>@namejoshua</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
+
+<br>
+
 之前曾經寫過一篇，在 server side 的 Node.js 上用 exiftool 來做相片的 exif parsing
 
 而現在，因為我想讓 user 能夠從 browser 就直接上傳照片，所以才又有了必須在 client side 做 exif parsing 的需求
@@ -74,13 +79,6 @@ EXIF.getData(file, function(){
 {% endhighlight %}
 
 所有 exif 的資訊就會在 this 裡面啦！
-
-<br>
-
-最後，附上個小 Demo！
-
-<p data-height="400" data-theme-id="0" data-slug-hash="AEBau" data-default-tab="result" data-user="namejoshua" class='codepen'>See the Pen <a href='http://codepen.io/namejoshua/pen/AEBau/'>AngularJS + <input> + exif-js demo</a> by yes (<a href='http://codepen.io/namejoshua'>@namejoshua</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//codepen.io/assets/embed/ei.js"></script>
 
 <br>
 
