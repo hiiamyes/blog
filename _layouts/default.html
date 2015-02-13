@@ -5,8 +5,17 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
+    <!-- open graph protocal -->
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}"> {% endif %} 
+    {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}/img/{{ page.image }}"> {% endif %}
+
+    <!--  -->
     <link rel="stylesheet" href="/css/syntax.css" />
     <link rel="stylesheet" href="/css/default.css">
+
+    <title>{{ page.title }}</title>
 
     <script>
     (function(i, s, o, g, r, a, m) {
@@ -15,7 +24,7 @@
             (i[r].q = i[r].q || []).push(arguments)
         }, i[r].l = 1 * new Date();
         a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
+            m = s.getElementsByTagName(o)[0];
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a, m)
