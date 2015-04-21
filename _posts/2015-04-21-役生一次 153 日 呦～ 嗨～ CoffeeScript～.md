@@ -75,17 +75,17 @@ But
 
 ## Compile & Run
 
-假設你有一個 yaya.coffee 內容是 `alert 'yaya'`
+假設你有一個 yaya.coffee 內容是 alert 'yaya'
 
 只要在 cmd 裡面打
 
-* coffee -w -c yaya.coffee *
+* coffee -w -c yaya.coffee
 
 你就能每修改一次 yaya.coffee，就獲得一份新的 yaya.js 啦
 
 接著再
 
-* node yaya.js *
+* node yaya.js
 
 恩～ 一切都是多麽的美好～～
 
