@@ -47,7 +47,7 @@ Gopro 照出來的照片我通常選的是 12MP = 4000 x 3000 pixel，因此把�
 
 就可以成功 Export 囉（暈）
 
-## 原來 H.264 還需要特定的 Resolution 才能 Encode 呀...
+原來 H.264 還需要特定的 Resolution 才能 Encode 呀...
 
 <br>
 
