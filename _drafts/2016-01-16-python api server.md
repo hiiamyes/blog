@@ -33,3 +33,5 @@ Server: Werkzeug/0.11.3 Python/3.5.1
 Date: Sat, 16 Jan 2016 03:06:27 GMT
 gg
 ```
+
+### deploy to aws
