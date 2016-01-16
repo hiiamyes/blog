@@ -34,4 +34,22 @@ Date: Sat, 16 Jan 2016 03:06:27 GMT
 gg
 ```
 
-### deploy to aws
+### deploy to aws [elastic beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-apps.html)
+```
+pip install awsebcli
+np
+```
+
+`eb init`
+ERROR: The current user does not have the correct permissions. Reason: Operation Denied. The security token included in the request is invalid.
+```
+Next, provide your access key and secret key so that the EB CLI can manage resources for you. Access keys are created in the AWS Identity and Access Management management console. If you don't have keys, see How Do I Get Security Credentials? in the Amazon Web Services General Reference.
+```
+IAM > Users > Security Credentials > Access Keys
+
+```
+eb create (User need createRole policy)
+eb status
+eb deploy
+eb open
+```
